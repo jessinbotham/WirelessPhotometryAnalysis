@@ -14,7 +14,7 @@ T1=EventDataExample
 %The example below will measure peaks within -1 to 5s relative to T0
 s=-1:0.5:5 
 for k1=1:size(T1,1)
-    [pk,loc,widths,proms]=findpeaks(T1(k1,:),s,'MinPeakProminence',1.2, 'MinPeakWidth',0.15);
+    [pk,loc,widths,proms]=findpeaks(T1(k1,:),s,'MinPeakProminence',1.5, 'MinPeakWidth',0.15);
     P{k1}=[pk]; %peaks_subset
     L{k1}=[loc]; %locationss_subset
     W{k1}=[widths]; %widths_subset
