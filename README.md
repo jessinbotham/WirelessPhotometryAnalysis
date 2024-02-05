@@ -1,4 +1,4 @@
-Codes used to process photometry data for Higginbotham et al., 2023.
+Codes used to process photometry data for Higginbotham et al., 2024.
 
 Start by downloading matlab and install pMAT.
 
