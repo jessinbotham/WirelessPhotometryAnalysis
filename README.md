@@ -40,7 +40,7 @@ Enter 'clear' in the command window before running each script.
    1. TrialTraceData_compiler.m prompts users to locate the Data folder containing trial trace data.
    2. Users designate a filename for the summary file to be created with identifiers and trial data aligned into a single sheet
    
-   To include z-score data and peak detection for each trial use the TrialTraceDataCompiler_withPeakAnalysis.m
+   To include z-score data and peak detection for each trial use the **_TrialTraceDataCompiler_withPeakAnalysis.m_**
    1. TrialTraceData_compiler.m prompts users to locate the Data folder containing trial trace data.
    2. Users designate a filename for the summary file to be created with identifiers and trial data aligned into a single sheet
    3. Users are prompted to enter the time parameters (Start Time, Increment, End Time) used to isolate events in pMAT (Pre Time (s), Bin Constant, Post Time (s)). NOTE: Converting the Bin Constant into Increments (s) users should note the sampling frequency. e.g. For 100 hz sampling, a Bin Constant of 50 equals an Increment of 0.5 s
@@ -49,7 +49,7 @@ Enter 'clear' in the command window before running each script.
    6. A pop-up window notifies the user that the compilation is completed
    NOTE: warning messages may appear indicating that a specified worksheet was added to the workbook. These warnings are not errors and should be ignored.
   
-   To include z-score data, peak detection, and AUC for each trial, use the TrialTraceDataCompiler_withPeakAnalysis_withAUC.m
+   To include z-score data, peak detection, and AUC for each trial, use the **_TrialTraceDataCompiler_withPeakAnalysis_withAUC.m_**
    1. Users locate the Data folder containing trial trace data.
    2. Users designate a filename for the summary file to be created with identifiers and trial data aligned into a single sheet
    3. Users are prompted to enter the time parameters (Start Time, Increment, End Time) used to isolate events in pMAT (Pre Time (s), Bin Constant, Post Time (s)). NOTE: Converting the Bin Constant into Increments (s) users should note the sampling frequency. e.g. For 100 hz sampling, a Bin Constant of 50 equals an Increment of 0.5 s
