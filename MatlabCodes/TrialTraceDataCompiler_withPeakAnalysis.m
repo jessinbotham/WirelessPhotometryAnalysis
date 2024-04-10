@@ -4,6 +4,7 @@
 %trial. The identifiers, raw data, z-scores, peaks, location, prominence
 %and width are saved in separate sheets within one summary workbook.
 
+%REQUIRES remove_blanks_and_shift_left.m function
 
 % Prompt the user to select a folder
 folder = uigetdir('Select a folder containing CSV files');
