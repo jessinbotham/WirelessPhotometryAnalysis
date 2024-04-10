@@ -2,7 +2,7 @@
 %with pMAT. When prompted to select a folder, you should select the 'Data'
 %folder generated with pMAT. The summary file will compile ID and session
 %info based on the first two variables of the file name separated by an
-%underscore delimeter. e.g. ANIMALID_SESSION2_otherinfonotincluded.csv
+%underscore delimiter. e.g. ANIMALID_SESSION2_otherinfonotincluded.csv
 
 % Prompt the user to select a folder
 folder = uigetdir('Select a folder containing CSV files');
