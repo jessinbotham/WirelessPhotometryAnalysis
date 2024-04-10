@@ -1,12 +1,9 @@
-%Use this script after RawDataPreProcessing and extraction of trial trace
-%data with pMat to compile trial trace data, transform raw data into
-%zscores, and perform the peak analysis for each trial
-%Start by selecting the folder where trial trace data .csv files are saved
-%and specify the time parameters used to extract the trials. Users are
-%prompted to designate thresholds for peak detection. The trials are
-%compiled into a single excel workbook and the file names are used as ID
-%and group/session variables. Separate sheets of the workbook contain
-%zscores, peaks, locations, prominences, and widths.
+%Includes same functions as TrialTraceData_Compiler.m with added
+%functions to transform raw data values into zscores and perform
+%analysis of peaks using the findpeaks function within each
+%trial. The identifiers, raw data, z-scores, peaks, location, prominence
+%and width are saved in separate sheets within one summary workbook.
+
 
 % Prompt the user to select a folder
 folder = uigetdir('Select a folder containing CSV files');
