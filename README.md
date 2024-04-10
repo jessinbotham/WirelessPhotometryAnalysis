@@ -49,7 +49,8 @@ Enter 'clear' in the command window before running each script.
    4. Users are also prompted for peak detection parameters to use with find peaks function
    5. Summary File saved with this script adds additional sheets for z-scores aligned by identifiers, Peaks, Locations, Prominences, and Widths. Note that peak parameters are not aligned with identifiers in the new workbook but are maintained in the same order as the raw data and z-score sheets so users should copy this information over before sorting data in the summary file.
    6. A pop-up window notifies the user that the compilation is completed
-   NOTE: warning messages may appear indicating that a specified worksheet was added to the workbook. These warnings are not errors and should be ignored.
+   
+   _NOTE: warning messages may appear indicating that a specified worksheet was added to the workbook. These warnings are not errors and should be ignored._
   
    To include z-score data, peak detection, and AUC for each trial, use the **_TrialTraceDataCompiler_withPeakAnalysis_withAUC.m_**
    1. Users locate the Data folder containing trial trace data.
@@ -59,5 +60,6 @@ Enter 'clear' in the command window before running each script.
    5. Users are finally prompted to enter up to 10 increments for AUC measurements. The default values range from -6 to 12 s in 2-s intervals
    6. Summary File saved with this script adds additional sheets for z-scores aligned by identifiers, Peaks, Locations, Prominences, Widths, and AUC. Note that peak parameters and AUC are not aligned with identifiers in the new workbook but are maintained in the same order as the raw data and z-score sheets so users should copy this information over before sorting data in the summary file.
    7. A pop-up window notifies the user that the compilation is completed
-
+   
+   _NOTE: warning messages may appear indicating that a specified worksheet was added to the workbook. These warnings are not errors and should be ignored._
 
