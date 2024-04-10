@@ -1,12 +1,12 @@
-The most recent version of these codes can be found in the MatlabCodes folder
+The most recent version of these codes can be found in the **MatlabCodes folder**
 
-Scripts are written for batch processing and analysis of Telefipho wireless photometry data.
+Scripts are written for batch processing and analysis of _Telefipho_ wireless photometry data.
 
 Raw data files should be saved as .txt files with the first two identifiers separated by an underscore delimiter. 
 Use sample data files in the SampleData folder for example
 Folder for analysis and codes should be saved in the matlab workspace before running
 
-REQUIREMENTS:
+**REQUIREMENTS:**
 Event data is extracted using the pMAT suite. For use of these codes with event data:
 Start by downloading Matlab and installing pMAT.
 Installation and user guide can be found here: https://github.com/djamesbarker/pMAT 
@@ -14,8 +14,8 @@ Other prerequisites include the remove_blanks_and_shift_left.m function in the M
 Codes are intended to be used in the order described below. 
 Enter 'clear' in the command window before running each script.
 
-WORKFLOW:
-1. RawDataPreprocessing.m
+**WORKFLOW:**
+**_1. RawDataPreprocessing.m_**
    Compiles and cleans a folder of Telefipho raw data files with event pairing saved in .txt format (see SampleData for example)
    1. The user is prompted to select the folder for analysis
    2. The user is prompted to select the number of rows to remove from the file to account for artifacts at the start of the recording. Use values of at least 20 (0.2 s) for sample data files
@@ -26,7 +26,7 @@ WORKFLOW:
    7. The _SignalFile and _EventData for each .txt file are saved for processing with pMAT. A copy of the signal files are also saved to a separate folder, Signal Files, for SpontaneousEvent_BatchProcessor.m
    8. The user is notified once the file saves are completed. A warning message including files with a large number of artifacts notifies the user of file abnormalities if present.
 
-2. SpontaneousEvent_BatchProcessor.m
+**_2. SpontaneousEvent_BatchProcessor.m_**
   Utilizes the Signal Files folder created with the RawDataPreprocessing.m to measure spontaneous peaks (not paired with behavior) throughout a recording file
   1.  User is prompted to select the directory location of Signal Files
   2.  User enters a name for the summary data file and specifies the detection parameters to use with the find peaks function
@@ -34,7 +34,7 @@ WORKFLOW:
   4.  For each file in the folder, a figure is saved containing the raw data, exponential fit, fit data with detected peaks circled, and a frequency distribution plot of the events detected. A separate .csv file containing all of the peaks detected for the recording file is generated. The plots and individual .csv file are saved to a "results" folder.
   5.  The specified summary data file compiles the identifying information obtained from the file name and the mean inter-event interval, frequency in Hz, peak height, prominence, width, and parameters used for detection
 
-3. TrialTraceData_compiler.m and versions
+**_3. TrialTraceData_compiler.m_** and versions
    These scripts are meant to be used AFTER extracting trail trace data (behavioral event paired) in pMAT suite. When using pMAT, underscore delimiters for file naming is necessary to maintain identifiers.
    The pMAT suite will save trial trace data to a separate 'Data' folder which should be used when running these scripts.
    1. TrialTraceData_compiler.m prompts users to locate the Data folder containing trial trace data.
