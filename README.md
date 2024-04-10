@@ -15,6 +15,8 @@ Codes are intended to be used in the order described below.
 Enter 'clear' in the command window before running each script.
 
 **WORKFLOW:**
+
+
 **_1. RawDataPreprocessing.m_**
    Compiles and cleans a folder of Telefipho raw data files with event pairing saved in .txt format (see SampleData for example)
    1. The user is prompted to select the folder for analysis
