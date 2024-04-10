@@ -1,6 +1,8 @@
 % Includes same functions as TrialTraceDataCompiler_withPeakAnalysis.m and
 %adds functions to measure AUC of trials within specified time bins
 
+%REQUIRES remove_blanks_and_shift_left.m function
+
 
 % Prompt the user to select a folder
 folder = uigetdir('Select a folder containing CSV files');
