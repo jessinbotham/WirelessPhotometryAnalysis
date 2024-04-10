@@ -1,15 +1,20 @@
-%Wireless photometry preprocessing script for integration with pMAT. The
-%raw data files are saved as .txt files and the data is extracted into two
-%separate files for trial trace data analysis. The user can determine the
-%number of rows to remove from the start of the recording file to account
-%for photobleaching at the start of the session. Txt files should be
-%compiled into a single folder within the MATLAB folder. A copy of the
-%signal file is compiled into a separate folder for SpontaneousEvent batch
-%processing with SpontaneousEvent_BatchProcessor.m
+%Preprocessing script for Telefipho Wireless Photometry .txt data for integration 
+%with pMAT suite for extracting event data. 
 
+%Main functions of the script are to
+%Batch process a folder of text files
+%Remove artifacts at the start of the session
+%Remove static artifacts in the recording coded as 32768 and replace with the 
+%nearest value
+%Perform an exponential fit on signal and time data to generate control channel
+%Split files into signal and event .csv files for pMAT
+%Create a separate folder for a copy of signal files for integration with the
+%SpontaneousEvent_BatchProcessor.m 
+
+%See ReadMe for full details on running this script
 
 %Prompting user to select the directory containing .txt files containing
-% raw data 
+%raw data 
 folderpath = uigetdir('', 'Select the directory containing .txt files');
 
 % Checking if the user cancels the selection
