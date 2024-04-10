@@ -1,7 +1,6 @@
-% Use this script after RawDataPreProcessing and extraction of trial trace
-% data with pMat to compile trial trace data, transform raw data into
-% zscores, perform the peak analysis for each trial, calculate AUC, and
-% plot AUC values.
+% Includes same functions as TrialTraceDataCompiler_withPeakAnalysis.m and
+%adds functions to measure AUC of trials within specified time bins
+
 
 % Prompt the user to select a folder
 folder = uigetdir('Select a folder containing CSV files');
