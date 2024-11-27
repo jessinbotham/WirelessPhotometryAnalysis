@@ -70,7 +70,7 @@ for i = 1:length(txtFiles)
     if num_rows_to_remove > 0
         data = data(num_rows_to_remove+1:end, :);
     end
-    
+
     % Counting the number of occurrences of '32768'
     num_32768_values = sum(data.Signal == 32768);
     
@@ -78,12 +78,19 @@ for i = 1:length(txtFiles)
         % Update summary string
         summary_str = [summary_str, sprintf('Signal and Event Data Extraction Complete! \n %d missing values detected in file %s.\n Check raw data files for accuracy.', num_32768_values, filename)];
     end
+        
+    % Replacing '32768' with the previous value
+    for j = 2:height(data)  % Start from the second row
+        if data.Signal(j) == 32768
+            data.Signal(j) = data.Signal(j - 1);
+        end
+    end
     
-    % Fit a linear trendline to columns A and B
-    coefficients = polyfit(data.Timestamp, data.Signal, 1); % Linear fit coefficients
+    % Fit a exponential trend line to columns A and B
+    exponentialFit = fit(data.Timestamp, data.Signal, 'exp2'); 
     
-    % Generate values for the "Control" column using the linear equation
-    data.Control = polyval(coefficients, data.Timestamp);
+    % Generate values for the "Control" column using the equation
+    data.Control = exponentialFit(data.Timestamp);
     
     % Constructing the name for the output .csv file for the signal
     [~, file_name, ~] = fileparts(filename);
@@ -101,7 +108,7 @@ for i = 1:length(txtFiles)
     % Copying the signal file to the "Signal Files" directory
     copyfile(csv_file_path, fullfile(signal_folderpath, csv_file_name));
     
-    disp(['Copy of Signal Data File for', filename, ' saved in "Signal Files" directory.']);
+    disp(['Copy of Signal Data File for ', filename, ' saved in "Signal Files" directory.']);
     
     % Creating second .csv file with values from the original .txt file
     EventData = table(data.Events, data.Timestamp, data.Timestamp, ...
